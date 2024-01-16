@@ -1,6 +1,23 @@
 # git - the simple guide
-## Setup
+## setup
 download git for Windows: https://github.com/git-for-windows/git/releases/download/v2.43.0.windows.1/Git-2.43.0-64-bit.exe
+
+## workflow
+Your local repository consists of three "trees" maintained by git. 
+the first one is your **Working Directory** which holds the actual files. 
+the second one is the **Index** which acts as a staging area and finally the **HEAD** which points to the last commit you've made.
+![git_workflow](./images/git_workflow.png)
+
+## common uses
+to clone git repository 
+```git clone git@github.com:dytruong/DataEngineer.git```
+after coding done in vscode
+```git add -A``` to push code to **Index** stage
+```git push``` to push code to the **HEAD** 
+
+if someone update something new in repository, use `git pull` to get the latest version.
+to change the branch, use `git checkout <branch_name>`. To list all branches `git branch -r`
+to create new branch, use `git checkout -b <new_branch_name>`. Remember, new branch will copy all files from `<current_branch>` to `<new_branch>`
 
 ## create a new repository
 create a new directory, open it and perform a `git init` to create a new git repository.
@@ -9,14 +26,6 @@ create a new directory, open it and perform a `git init` to create a new git rep
 ## checkout a repository
 create a working copy of a local repository by running the command
 `git clone /path/to/repository`
-
-for ex: `git clone git@github.com:dytruong/DataEngineer.git`
-
-## workflow
-Your local repository consists of three "trees" maintained by git. 
-the first one is your **Working Directory** which holds the actual files. 
-the second one is the **Index** which acts as a staging area and finally the **HEAD** which points to the last commit you've made.
-![git_workflow](./images/git_workflow.png)
 
 ## add & commit
 You can propose changes (add it to the **Index**) using
