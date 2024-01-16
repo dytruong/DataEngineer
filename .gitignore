@@ -1,0 +1,7 @@
+# logs DAG
+logs
+__pycache__
+.secret_key
+gg-sheet-cred.json
+credential.ini
+database.ini
